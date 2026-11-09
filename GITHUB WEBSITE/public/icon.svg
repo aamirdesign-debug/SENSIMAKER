@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2a0815" stop-opacity="1" />
+      <stop offset="60%" stop-color="#0f0517" stop-opacity="1" />
+      <stop offset="100%" stop-color="#07030e" stop-opacity="1" />
+    </radialGradient>
+    <linearGradient id="neonRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff4d6d" />
+      <stop offset="50%" stop-color="#ff1e44" />
+      <stop offset="100%" stop-color="#99001f" />
+    </linearGradient>
+    <linearGradient id="sliderGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff1e44" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#ff1e44" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#ff1e44" stop-opacity="0.2" />
+    </linearGradient>
+    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGlow)" />
+  <rect width="504" height="504" x="4" y="4" rx="108" fill="none" stroke="#ff1e44" stroke-width="3" stroke-opacity="0.35" />
+
+  <!-- Outer Sniper Reticle Rings -->
+  <circle cx="256" cy="256" r="184" fill="none" stroke="#ff1e44" stroke-width="4" stroke-dasharray="14 10" opacity="0.4" />
+  <circle cx="256" cy="256" r="148" fill="none" stroke="#ff1e44" stroke-width="6" opacity="0.8" />
+  
+  <!-- 4 Cardinal Tick Marks -->
+  <line x1="256" y1="52" x2="256" y2="92" stroke="#ff1e44" stroke-width="6" stroke-linecap="round" />
+  <line x1="256" y1="420" x2="256" y2="460" stroke="#ff1e44" stroke-width="6" stroke-linecap="round" />
+  <line x1="52" y1="256" x2="92" y2="256" stroke="#ff1e44" stroke-width="6" stroke-linecap="round" />
+  <line x1="420" y1="256" x2="460" y2="256" stroke="#ff1e44" stroke-width="6" stroke-linecap="round" />
+
+  <!-- 4 Corner Tactical Crosshair Angle Brackets -->
+  <path d="M 166 166 L 140 166 L 140 192" fill="none" stroke="#ff1e44" stroke-width="4" stroke-linecap="round" />
+  <path d="M 346 166 L 372 166 L 372 192" fill="none" stroke="#ff1e44" stroke-width="4" stroke-linecap="round" />
+  <path d="M 166 346 L 140 346 L 140 320" fill="none" stroke="#ff1e44" stroke-width="4" stroke-linecap="round" />
+  <path d="M 346 346 L 372 346 L 372 320" fill="none" stroke="#ff1e44" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Three Horizontal Sensitivity Calibration Equalizer / Slider Tracks -->
+  <!-- Track 1 (Top) -->
+  <line x1="168" y1="208" x2="344" y2="208" stroke="url(#sliderGlow)" stroke-width="8" stroke-linecap="round" />
+  <circle cx="296" cy="208" r="10" fill="#ffffff" filter="url(#glowEffect)" />
+  <circle cx="296" cy="208" r="5" fill="#ff1e44" />
+
+  <!-- Track 2 (Center) -->
+  <line x1="152" y1="256" x2="360" y2="256" stroke="url(#sliderGlow)" stroke-width="10" stroke-linecap="round" />
+  
+  <!-- Track 3 (Bottom) -->
+  <line x1="168" y1="304" x2="344" y2="304" stroke="url(#sliderGlow)" stroke-width="8" stroke-linecap="round" />
+  <circle cx="216" cy="304" r="10" fill="#ffffff" filter="url(#glowEffect)" />
+  <circle cx="216" cy="304" r="5" fill="#ff1e44" />
+
+  <!-- Glowing Central Laser Dot / Beacons -->
+  <circle cx="256" cy="256" r="32" fill="#ff1e44" opacity="0.25" filter="url(#glowEffect)" />
+  <circle cx="256" cy="256" r="18" fill="url(#neonRed)" filter="url(#glowEffect)" />
+  <circle cx="256" cy="256" r="8" fill="#ffffff" />
+</svg>

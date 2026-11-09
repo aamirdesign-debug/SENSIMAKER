@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-chakra: 'Chakra Petch', sans-serif;
+    --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-jakarta);
+    background-color: #07030e;
+    color: #f4f4f5;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--font-chakra);
+  }
+}
+
+.font-chakra {
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.font-jakarta {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Cyber Grid Background */
+.cyber-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 30, 68, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 30, 68, 0.04) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+.cyber-grid-dense {
+  background-image: 
+    linear-gradient(to right, rgba(255, 30, 68, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 30, 68, 0.08) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+/* Custom Tactical Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07030e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff1e44;
+}
+
+/* Glow utility classes */
+.glow-red {
+  box-shadow: 0 0 25px rgba(255, 30, 68, 0.4);
+}
+
+.glow-yellow {
+  box-shadow: 0 0 25px rgba(250, 204, 21, 0.4);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 25px rgba(14, 165, 233, 0.4);
+}
+
+.glow-green {
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.4);
+}
+
+/* Pulse beacon keyframes */
+@keyframes beacon-pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+.animate-beacon {
+  animation: beacon-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

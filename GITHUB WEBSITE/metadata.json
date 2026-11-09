@@ -1,0 +1,8 @@
+{
+  "name": "SENSI MAKER",
+  "description": "Esports sensitivity calculation lab, safe Android DPI limits, custom HUD layouts, and aim training benchmarks for Free Fire mobile & PC players.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

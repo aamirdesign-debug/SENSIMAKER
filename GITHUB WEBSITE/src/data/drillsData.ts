@@ -1,0 +1,212 @@
+export interface DrillItem {
+  id: string;
+  category: 'One Tap' | 'Esports' | 'Mixed';
+  title: string;
+  objective: string;
+  durationSeconds: {
+    beginner: number;
+    intermediate: number;
+    advanced: number;
+  };
+  repsOrTarget: string;
+  focusArea: string;
+  weaponFocus: string;
+}
+
+export const DRILL_ROUTINES: DrillItem[] = [
+  // 1. One Tap Training (6 drills)
+  {
+    id: 'ot-1',
+    category: 'One Tap',
+    title: 'Crosshair Shoulder-Level Pre-Aim',
+    objective: 'Keep crosshair positioned at enemy clavicle height while sprinting around training dummies.',
+    durationSeconds: { beginner: 180, intermediate: 300, advanced: 480 },
+    repsOrTarget: '50 Smooth Strafe Alignments',
+    focusArea: 'Pre-Aim Elevation',
+    weaponFocus: 'Fist / Melee',
+  },
+  {
+    id: 'ot-2',
+    category: 'One Tap',
+    title: 'Desert Eagle Single-Flick Deadstop',
+    objective: 'Stop sprint, tap joystick neutral, and flick Desert Eagle straight up to the helmet.',
+    durationSeconds: { beginner: 240, intermediate: 360, advanced: 600 },
+    repsOrTarget: '40 Red Headshots in a row',
+    focusArea: 'Vertical Drag Snap',
+    weaponFocus: 'Desert Eagle',
+  },
+  {
+    id: 'ot-3',
+    category: 'One Tap',
+    title: 'Woodpecker Tap-Rhythm Cadence',
+    objective: 'Fire single semi-auto bullets at distant moving targets without bloom expansion.',
+    durationSeconds: { beginner: 180, intermediate: 300, advanced: 420 },
+    repsOrTarget: '35 Crisp Headshots',
+    focusArea: 'Recoil Reset Timing',
+    weaponFocus: 'Woodpecker / SVD',
+  },
+  {
+    id: 'ot-4',
+    category: 'One Tap',
+    title: 'Rotation Drag Against Strafing Targets',
+    objective: 'Swipe fire button in an arc following enemy trajectory before pulling up.',
+    durationSeconds: { beginner: 240, intermediate: 360, advanced: 540 },
+    repsOrTarget: '30 Moving Target Headshots',
+    focusArea: 'Lateral Angle Compensation',
+    weaponFocus: 'M500 / Desert Eagle',
+  },
+  {
+    id: 'ot-5',
+    category: 'One Tap',
+    title: 'First-Shot Accuracy Peeking Drill',
+    objective: 'Slice corners behind obstacles, peek for 0.3s, snap fire, and retreat instantly.',
+    durationSeconds: { beginner: 180, intermediate: 300, advanced: 480 },
+    repsOrTarget: '25 Clean Peek Shots',
+    focusArea: 'Exposure Minimization',
+    weaponFocus: 'SVD / AC80',
+  },
+  {
+    id: 'ot-6',
+    category: 'One Tap',
+    title: 'High-Speed Reflex Trigger Snap',
+    objective: 'React instantaneously when target appears from cover; fire within 180ms window.',
+    durationSeconds: { beginner: 150, intermediate: 240, advanced: 360 },
+    repsOrTarget: '30 Sub-200ms Hits',
+    focusArea: 'Visual Motor Latency',
+    weaponFocus: 'Desert Eagle',
+  },
+
+  // 2. Esports Training (7 drills)
+  {
+    id: 'es-1',
+    category: 'Esports',
+    title: '360° Movement & Zig-Zag Sprinting',
+    objective: 'Alternate rapid left-right camera pans while maintaining uninterrupted forward sprint momentum.',
+    durationSeconds: { beginner: 180, intermediate: 300, advanced: 480 },
+    repsOrTarget: '5 Full Circuits',
+    focusArea: 'Camera Speed Control',
+    weaponFocus: 'Pan / Katana',
+  },
+  {
+    id: 'es-2',
+    category: 'Esports',
+    title: 'Counter-Strafing Bullet Evading',
+    objective: 'Break enemy lock-on by switching directional vectors every 0.4 seconds.',
+    durationSeconds: { beginner: 180, intermediate: 300, advanced: 420 },
+    repsOrTarget: '40 Juke Sequences',
+    focusArea: 'Hitbox Displacement',
+    weaponFocus: 'Melee',
+  },
+  {
+    id: 'es-3',
+    category: 'Esports',
+    title: 'Instant 0.2s Gloo Wall Micro-Placement',
+    objective: 'Fire shot -> Tap Gloo Wall -> Drag camera down to ground -> Deploy wall -> Jump back.',
+    durationSeconds: { beginner: 240, intermediate: 360, advanced: 600 },
+    repsOrTarget: '50 Rapid Wall Placements',
+    focusArea: 'Defensive Muscle Memory',
+    weaponFocus: 'Shotgun + Gloo Wall',
+  },
+  {
+    id: 'es-4',
+    category: 'Esports',
+    title: 'Close-Range SMG Continuous Tracking',
+    objective: 'Track erratic moving targets in the 5m zone with continuous UMP/MP40 hipfire.',
+    durationSeconds: { beginner: 180, intermediate: 300, advanced: 480 },
+    repsOrTarget: '35 Full Clip Lasers',
+    focusArea: 'Smooth Hipfire Tracking',
+    weaponFocus: 'UMP / MP40',
+  },
+  {
+    id: 'es-5',
+    category: 'Esports',
+    title: 'Target Switching Multi-Opponent Drill',
+    objective: 'Knock down dummy 1, snap camera 90° immediately, lock and spray dummy 2.',
+    durationSeconds: { beginner: 200, intermediate: 300, advanced: 480 },
+    repsOrTarget: '25 Double-Knock Sequences',
+    focusArea: 'Spatial Awareness',
+    weaponFocus: 'Groza / AK / SCAR',
+  },
+  {
+    id: 'es-6',
+    category: 'Esports',
+    title: 'Crouch-Uncrouch Recoil Stabilizer',
+    objective: 'Drop to crouch mid-spray to reset weapon bloom and tighten bullet spread cone.',
+    durationSeconds: { beginner: 180, intermediate: 240, advanced: 360 },
+    repsOrTarget: '30 Controlled Bursts',
+    focusArea: 'Bloom Mitigation',
+    weaponFocus: 'M4A1 / UMP',
+  },
+  {
+    id: 'es-7',
+    category: 'Esports',
+    title: 'Hard Cover Rotate & Reset Routine',
+    objective: 'Engage from boulder/gloo cover, reload behind cover, rotate to alternative angle.',
+    durationSeconds: { beginner: 240, intermediate: 360, advanced: 540 },
+    repsOrTarget: '20 Full Cover Rotations',
+    focusArea: 'Tournament Positioning',
+    weaponFocus: 'Marksman + Gloo',
+  },
+
+  // 3. Mixed Training (6 drills)
+  {
+    id: 'mx-1',
+    category: 'Mixed',
+    title: 'Quick Weapon Switch Fast-Combos',
+    objective: 'Fire shotgun blast -> Tap switch button to melee/pistol -> Slide jump -> Switch back.',
+    durationSeconds: { beginner: 180, intermediate: 300, advanced: 480 },
+    repsOrTarget: '45 Seamless Combos',
+    focusArea: 'HUD Finger Coordination',
+    weaponFocus: 'M1887 + Melee',
+  },
+  {
+    id: 'mx-2',
+    category: 'Mixed',
+    title: 'Mid-Range Red-Dot Burst Tracking',
+    objective: 'Scope in 2x/Red Dot on vehicle or running target, burst 4 bullets, un-scope, re-aim.',
+    durationSeconds: { beginner: 180, intermediate: 300, advanced: 420 },
+    repsOrTarget: '30 Precision Bursts',
+    focusArea: 'Scope Sensitivity Control',
+    weaponFocus: 'SCAR / Woodpecker',
+  },
+  {
+    id: 'mx-3',
+    category: 'Mixed',
+    title: 'Pan Cover Back-Shielding Sprint',
+    objective: 'Hold melee pan equipped behind back while retreating under heavy enemy fire.',
+    durationSeconds: { beginner: 120, intermediate: 200, advanced: 300 },
+    repsOrTarget: '15 Clean Retreats',
+    focusArea: 'Defensive Angles',
+    weaponFocus: 'Pan',
+  },
+  {
+    id: 'mx-4',
+    category: 'Mixed',
+    title: 'Jump-Shot Aerial Elevation Flick',
+    objective: 'Jump over obstacle, spot enemy mid-air, drag down-then-up before landing.',
+    durationSeconds: { beginner: 200, intermediate: 320, advanced: 480 },
+    repsOrTarget: '25 Mid-Air Headshots',
+    focusArea: 'Z-Axis Vertical Physics',
+    weaponFocus: 'M1014 / Desert Eagle',
+  },
+  {
+    id: 'mx-5',
+    category: 'Mixed',
+    title: 'Double Sniper Quick Switch No-Scope',
+    objective: 'Fire AWM/Barrett -> Switch to 2nd sniper -> Fire instantly without reload delay.',
+    durationSeconds: { beginner: 240, intermediate: 360, advanced: 600 },
+    repsOrTarget: '30 Double Sniper Chains',
+    focusArea: 'Sniper Cadence',
+    weaponFocus: 'Double AWM / Barrett',
+  },
+  {
+    id: 'mx-6',
+    category: 'Mixed',
+    title: 'Esports Tournament Warm-Up Gauntlet',
+    objective: 'Complete a full continuous circuit of 1-tap, gloo wall, weapon swap, and tracking.',
+    durationSeconds: { beginner: 300, intermediate: 600, advanced: 900 },
+    repsOrTarget: '1 Full Complete Gauntlet',
+    focusArea: 'Holistic Muscle Activation',
+    weaponFocus: 'Tournament Loadout',
+  },
+];
